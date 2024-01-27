@@ -1,6 +1,7 @@
 README.md
 setup.py
 topsis_experimental/__init__.py
+topsis_experimental/__main__.py
 topsis_experimental/topsis_experimental.py
 topsis_experimental.egg-info/PKG-INFO
 topsis_experimental.egg-info/SOURCES.txt

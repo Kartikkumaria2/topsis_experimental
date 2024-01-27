@@ -1,2 +1,2 @@
 [console_scripts]
-topsis_experimental = topsis_experimental.topsis_demo:main
+topsis_experimental = topsis_experimental.__main__:main
