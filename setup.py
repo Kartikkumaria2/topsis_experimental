@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='topsis_experimental',  # <--- Updated name
-    version='0.7',
+    version='0.8',
     packages=find_packages(),
     install_requires=[
         'pandas',
