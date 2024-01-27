@@ -15,16 +15,18 @@ Installation
 
 To install topsis_experimental using pip:
 
-Bash
+```bash
 pip install topsis_experimental
-Use code with caution. Learn more
-Usage
+```
+
+
 
 You can use topsis_experimental from the command line as follows:
 
-Bash
+```bash
 topsis_experimental input.csv weights impacts output.csv
-Use code with caution. Learn more
+```
+
 where:
 
 input.csv: The input CSV file containing the decision matrix (alternatives and criteria).
@@ -43,9 +45,10 @@ And you want to perform TOPSIS with weights 1,1,1,2,1 and all positive impacts (
 
 Run the following command:
 
-Bash
+```bash
 topsis_experimental data.csv "1,1,1,2,1" "+,+,+,-,+" results.csv
-Use code with caution. Learn more
+```
+
 This will create a file results.csv with the TOPSIS scores and rankings.
 
 Additional Notes
