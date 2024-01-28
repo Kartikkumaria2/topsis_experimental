@@ -5,10 +5,12 @@ import sys
 from sklearn.preprocessing import LabelEncoder
 
 def helper(filename,weights,impacts,output):
+
     col_names = ["Fund Name"]
     
     try:
         df = pd.read_csv(filename,header = None)
+        df_original = pd.read_csv(filename,header = None)
         
     except FileNotFoundError:
         print(f"Error: File '{filename}' not found.")
@@ -22,6 +24,7 @@ def helper(filename,weights,impacts,output):
     for i in range(1,len(df.columns)):
         a = "P"+ str(i)
         col_names.append(a)
+    df_original.columns = col_names
     df.columns = col_names
 
 
@@ -81,9 +84,10 @@ def helper(filename,weights,impacts,output):
     df = df.drop("S_pos",axis=1)
     df = df.drop("S_neg",axis=1)
 
-    
-    df.to_csv(output,index=False)
-    print(df)
+    df_original["Topsis Scores"] = scores
+    df_original["Rank"] = df_original['Topsis Scores'].rank(ascending=False).astype(int)
+    df_original.to_csv(output,index=False)
+    print(df_original)
 
 def main():
     parser = argparse.ArgumentParser(description='Topsis Analysis')
